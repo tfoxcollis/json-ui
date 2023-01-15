@@ -20,7 +20,7 @@ const App = () => {
       console.log(data)
       const file = new Blob([data?.file], { type: 'text/plain' })
       let downloadTxt = document.getElementById('downloadTxt')
-      downloadTxt.download = data.jobName.split(' ').join('') + '.txt'
+      downloadTxt.download = data.jobName.split(' ').join('') + '.doc'
       downloadTxt.href = window.URL.createObjectURL(file)
       downloadTxt.style.display = 'block'
     })
