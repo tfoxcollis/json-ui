@@ -10,7 +10,7 @@ const App = () => {
     const fData = new FormData()
     fData.append('jsonFile', files[0])
 
-    fetch('http://localhost:3001/converter', {
+    fetch('https://json-api-tfoxcollis.vercel.app/converter', {
       method: "POST",
       mode: "cors",
       body: files[0]
