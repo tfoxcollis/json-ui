@@ -17,7 +17,6 @@ const App = () => {
     })
     .then(response => response.json())
     .then((data) => {
-      console.log(data)
       const file = new Blob([data?.file], { type: 'text/plain' })
       let downloadTxt = document.getElementById('downloadTxt')
       downloadTxt.download = data.jobName.split(' ').join('') + '.doc'
@@ -28,7 +27,7 @@ const App = () => {
 
   return (
     <div className="main-box">
-    <h1>Chandelle's JSON converter v1.0</h1>
+    <h1>Chandelle's Handy Dandy JSON converter <br/> v2.0</h1>
       <form onSubmit={handleSubmit}>
         <label>
           file:
